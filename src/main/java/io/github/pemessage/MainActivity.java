@@ -1,4 +1,4 @@
-package pl.czak.minimal;
+package io.github.pemessage;
 
 import android.app.Activity;
 import android.os.Bundle;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pl.czak.minimal">
+    package="io.github.pemessage">
     <application android:label="Minimal">
         <activity android:name="MainActivity">
             <intent-filter>
@@ -9,4 +9,8 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-sdk
+    android:minSdkVersion="23"
+    android:targetSdkVersion="23" />
+
 </manifest>
