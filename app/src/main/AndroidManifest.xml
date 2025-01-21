@@ -12,12 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mydemo"
         tools:targetApi="31">
+        <!--Learn:
+            活动的注册位于application块内
+            <activity android:name="xxx" > 用于指明具体注册哪一个Java Class
+            .MainActivity 只是缩写 com.example.mydemo.MainActivity，
+            在以往manifest attribute 有一个package 指明前述缩写，现在似乎不需要了？？？
+        -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
+                <!-- Learn: 这两行只是指定哪一个activity 是Homepage（entrypoint）-->
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

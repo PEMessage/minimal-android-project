@@ -18,6 +18,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Learn: For Android IDE: use logt snippet to quickly gen String TAG
     private static final String TAG = "MainActivity";
 
     private void showMessage(String msg) {

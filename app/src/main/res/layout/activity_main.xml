@@ -7,6 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <!--Learn:
+            use @+ to define id, @ to refence one -> 第一行代码 P35
+
+            任何 View 对象都可以拥有与其关联的整数 ID， 在树中唯一标识 View
+            字符串开头的 at 符号 (@) 表示 XML 解析器解析并展开 ID 字符串的其余部分，并将其标识为 ID 资源。
+            加号 (+) 表示这是新的资源名称 您必须在R.java中创建并将其添加到资源中 文件。
+                -> https://developer.android.com/develop/ui/views/layout/declaring-layout?hl=zh-cn#id
+            ID 不必在整个结构树中保持唯一，但必须是唯一的 在您搜索的树状结构部分是唯一的。
+                -> 平时在onCreate里面调用findViewById，其实是View的成员方法，由于AppCompatActivity继承View。
+                   所以是搜索当前Object内的id，只需要当前Object内id唯一即可
+    -->
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
@@ -15,7 +27,8 @@
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+    />
 
     <!--Prompt: write a scrollable text view in android java-->
     <ScrollView
@@ -25,7 +38,8 @@
         app:layout_constraintTop_toBottomOf="@id/button1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+    >
 
         <TextView
             android:id="@+id/textView"
@@ -33,7 +47,8 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="Your long text goes here. This is a sample text that will be scrollable. You can add more text to see the scrolling effect."
-            android:textSize="16sp" />
+            android:textSize="16sp"
+        />
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
