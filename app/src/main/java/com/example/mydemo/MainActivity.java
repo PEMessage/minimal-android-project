@@ -6,6 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import android.widget.TextView;
+
+
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -21,12 +25,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void postOnCreated() {
-        // 1. bind id to java  object
+        // 1. bind id to java object
+        TextView textView = findViewById(R.id.textView);
         Button button1 = findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showMessage("Hello world");return;
+                showMessage("Hello world");
+                String msg = "";
+                for ( int i = 0 ; i < 30 ; i++) {
+                    msg += "Hello world, on text box\n";
+                }
+                textView.setText(msg);
             }
         });
     }
