@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mydemo"
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
@@ -17,6 +18,7 @@
             <activity android:name="xxx" > 用于指明具体注册哪一个Java Class
             .MainActivity 只是缩写 com.example.mydemo.MainActivity，
             在以往manifest attribute 有一个package 指明前述缩写，现在似乎不需要了？？？
+             -> 0225更新：仍然需要，放到AOSP中编译没有会报错，这里不知道为何不报错
         -->
         <activity
             android:name=".MainActivity"
